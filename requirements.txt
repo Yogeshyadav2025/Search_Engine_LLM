@@ -1,16 +1,16 @@
 streamlit
 langchain
-langchain-community==0.2.9
+langchain-community
 langchain-groq
 langchain-text-splitters
 langchain-openai
-langchain_huggingface
-langchain_chroma
+langchain-huggingface
+langchain-chroma
 
 python-dotenv
 pypdf
 pymupdf
-bs4
+beautifulsoup4
 arxiv
 wikipedia
 chromadb
@@ -21,10 +21,11 @@ openai
 mysql-connector-python
 SQLAlchemy
 validators==0.28.1
-youtube_transcript_api
+youtube-transcript-api
 unstructured
 pytube
 numexpr
 huggingface_hub
-duckduckgo-search==5.3.0
+duckduckgo-search
 ddgs==1.9.9
+
