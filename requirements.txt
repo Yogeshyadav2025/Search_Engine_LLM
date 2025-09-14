@@ -27,5 +27,3 @@ pytube
 numexpr
 huggingface_hub
 duckduckgo-search
-ddgs==1.9.9
-
