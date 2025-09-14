@@ -26,4 +26,6 @@ unstructured
 pytube
 numexpr
 huggingface_hub
-duckduckgo-search
+duckduckgo-search==5.3.0
+
+
