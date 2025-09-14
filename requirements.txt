@@ -1,6 +1,6 @@
 streamlit
 langchain
-langchain-community
+langchain-community==0.2.9
 langchain-groq
 langchain-text-splitters
 langchain-openai
@@ -26,9 +26,5 @@ unstructured
 pytube
 numexpr
 huggingface_hub
-duckduckgo-search
+duckduckgo-search==5.3.0
 ddgs==1.9.9
-
-
-
-
