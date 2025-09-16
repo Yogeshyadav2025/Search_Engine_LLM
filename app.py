@@ -45,10 +45,20 @@ if prompt:=st.chat_input(placeholder="What is machine learning?"):
 
     search_agent=initialize_agent(tools,llm,agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,handling_parsing_errors=True)
 
-    with st.chat_message("assistant"):
-        st_cb=StreamlitCallbackHandler(st.container(),expand_new_thoughts=False)
-        response=search_agent.run(st.session_state.messages,callbacks=[st_cb])
-        st.session_state.messages.append({'role':'assistant',"content":response})
-        st.write(response)
+with st.chat_message("assistant"):
+    st_cb = StreamlitCallbackHandler(st.container(), expand_new_thoughts=False)
+    latest_user_message = st.session_state.messages[-1]["content"]  # <-- NEW
+    response = search_agent.run(latest_user_message, callbacks=[st_cb])  # <-- UPDATED
+    st.session_state.messages.append({"role": "assistant", "content": response})
+    st.write(response)
+
+
+
+    # with st.chat_message("assistant"):
+    #     st_cb=StreamlitCallbackHandler(st.container(),expand_new_thoughts=False)
+    #     response=search_agent.run(st.session_state.messages,callbacks=[st_cb])
+    #     st.session_state.messages.append({'role':'assistant',"content":response})
+    #     st.write(response)
+
 
 
